@@ -5,7 +5,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-31%2F31%20passing-success)](#)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.28-blue)](contracts/foundry.toml)
-[![Arc](https://img.shields.io/badge/Arc%20Testnet-deploy%20pending-lightgrey)](#)
+[![Arc](https://img.shields.io/badge/Arc%20Testnet-v0%20live-blue)](https://testnet.arcscan.app/address/0x47e6d5669d302c8ed6b32189820f36c172a02691)
+
+### v0 on Arc Testnet
+
+| Contract | Address | Deploy tx |
+|---|---|---|
+| **Helm** | [`0x47e6d5669d302c8ed6b32189820f36c172a02691`](https://testnet.arcscan.app/address/0x47e6d5669d302c8ed6b32189820f36c172a02691) | [`0x448362fd...`](https://testnet.arcscan.app/tx/0x448362fd7bb1600a9bd3fa588dadd7ca3ff0d002f329aba8be0edbea7705c1ed) |
+| **ManualMetricOracle** | [`0xee573c409c2847bbfb564283afac3338e1e6356c`](https://testnet.arcscan.app/address/0xee573c409c2847bbfb564283afac3338e1e6356c) | [`0xbd2863d3...`](https://testnet.arcscan.app/tx/0xbd2863d31b074ae2cae2c858a1d12f1403603a7807be2f0196edc218a198dac0) |
+
+Deployed gas: ~1.6M (~0.032 USDC at 20 gwei).
 
 > **Read this first.** Helm is a research-grade reference implementation. There are no production adopters yet — there are no production agent DAOs to adopt it. The mechanism design is the contribution; the bet is that the audience materializes. If you came here expecting a turnkey decision system for your DAO, **this isn't that today**. Honest limits at the bottom.
 
@@ -149,7 +158,7 @@ If you are evaluating Helm for any actual integration, read this carefully.
 
 - **No production adopters.** No agent DAO is using Helm today, on any chain. The number of mature autonomous agent DAOs in May 2026 is roughly zero. **The bet is that the audience materializes** — and it might not.
 - **Pre-audit, pre-mainnet.** 31 forge tests pass. No independent security review has happened. Treat as research code.
-- **Not deployed yet.** When this README is read, Arc Testnet RPC was congested and the deploy step is pending. Deploy script + tx hashes will be added once RPC clears.
+- **No real on-chain lifecycle yet, only deployment.** v0 is deployed to Arc Testnet (addresses + deploy txs above) but **no full propose → bet → decide → resolve → claim cycle has been run on a live chain**. The 31 forge tests cover the mechanism comprehensively, but real-chain end-to-end is the next milestone.
 - **Manual oracle in v0.** The shipped `ManualMetricOracle` is trivially trusted (a reporter address sets values without challenge). Real deployments need a validator-network oracle — most realistic adapter is a thin wrapper over Crucible's `TestcaseResolverV5`. That's v0.2 work.
 - **No SDK yet.** Wallet integration is raw `viem` / `cast` calls. SDK is deferred until there's evidence anyone wants one.
 - **Decision attack surface.** A coordinated whale can bet large amounts on the favored branch in either direction near `decideAt`. There is no commit-reveal phase, no slippage protection, no impermanent fairness guarantee. v0.2 may borrow Crucible's commit-reveal pattern if a real attack vector emerges in practice.
