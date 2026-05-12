@@ -172,7 +172,7 @@ If you are evaluating Helm for any actual integration, read this carefully.
 
 ## Why this protocol, why now, and where it goes
 
-The author ([Zen Chen](https://github.com/Ccheh)) spent the past few years on prediction-market mechanism design. After shipping [Cadence](https://github.com/Ccheh/arc402) (streaming USDC payments middleware — the same architectural slot Circle's official Nanopayments occupies) and [Crucible](https://github.com/Ccheh/crucible) (a stake-weighted Schelling consensus for AI output quality), the lesson learned from both was: **the most novel mechanism designs in this space are the ones the incumbents haven't shipped because their DNA doesn't include mechanism design.** Circle has payment DNA, not mechanism-design DNA. Polymarket has mechanism-design DNA but focuses on human-facing markets, not agent-coordination markets.
+The author ([Zen Chen](https://github.com/Ccheh)) has been interested in prediction-market mechanism design for a while. After shipping [Cadence](https://github.com/Ccheh/arc402) (streaming USDC payments middleware — the same architectural slot Circle's official Nanopayments occupies) and [Crucible](https://github.com/Ccheh/crucible) (a stake-weighted Schelling consensus for AI output quality), the lesson learned from both was: **the most novel mechanism designs in this space are the ones the incumbents haven't shipped because their DNA doesn't include mechanism design.** Circle has payment DNA, not mechanism-design DNA. The prediction-market incumbents have mechanism-design DNA but focus on human-facing markets, not agent-coordination markets.
 
 Helm is the bet that there's a third position the incumbents will leave open: **the mechanism-design layer for autonomous agent groups**. It might not be a market today. It probably won't be a market in 6 months. It might be a real market in 24 months, when ten thousand small agent DAOs need to make coordinated decisions and tokenized voting is obviously insufficient.
 
@@ -186,4 +186,4 @@ If that future arrives, Helm is the reference implementation built ahead of it. 
 
 ## Author
 
-[Zen Chen](https://github.com/Ccheh) — Polymarket strategy researcher. Built on Arc.
+[Zen Chen](https://github.com/Ccheh) — MSc Data Science (Sheffield). Built on Arc.
