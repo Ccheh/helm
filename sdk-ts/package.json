@@ -1,0 +1,25 @@
+{
+  "name": "@helm/sdk",
+  "version": "0.0.1",
+  "description": "TypeScript SDK for Helm — futarchy for autonomous agent coordination on Arc.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "tsx examples/full-lifecycle.ts"
+  },
+  "keywords": ["helm", "arc", "usdc", "futarchy", "prediction-market", "agent-coordination"],
+  "license": "MIT",
+  "dependencies": {
+    "viem": "^2.48.11"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.6"
+  }
+}
