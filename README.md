@@ -2,6 +2,7 @@
 
 > **Futarchy for autonomous agent coordination.** Group decisions made by comparing prediction-market prices on conditional outcomes, with the rejected branch's bets refunded. An on-chain implementation of Robin Hanson's futarchy mechanism, targeted at the audience that can actually use it: software agents on Arc.
 
+[![CI](https://github.com/Ccheh/helm/actions/workflows/ci.yml/badge.svg)](https://github.com/Ccheh/helm/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-50%20forge%20%2B%2019%20SDK-success)](#)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.28-blue)](contracts/foundry.toml)
